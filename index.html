@@ -1,1268 +1,2174 @@
-
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>up skill lab</title>
 
-    <style media="screen">
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight .gh {
-  color: #999999;
-}
-.highlight .sr {
-  color: #f6aa11;
-}
-.highlight .go {
-  color: #888888;
-}
-.highlight .gp {
-  color: #555555;
-}
-.highlight .gs {
-}
-.highlight .gu {
-  color: #aaaaaa;
-}
-.highlight .nb {
-  color: #f6aa11;
-}
-.highlight .cm {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #75715e;
-}
-.highlight .c1 {
-  color: #75715e;
-}
-.highlight .cs {
-  color: #75715e;
-}
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
-  color: #75715e;
-}
-.highlight .err {
-  color: #960050;
-}
-.highlight .gr {
-  color: #960050;
-}
-.highlight .gt {
-  color: #960050;
-}
-.highlight .gd {
-  color: #49483e;
-}
-.highlight .gi {
-  color: #49483e;
-}
-.highlight .ge {
-  color: #49483e;
-}
-.highlight .kc {
-  color: #66d9ef;
-}
-.highlight .kd {
-  color: #66d9ef;
-}
-.highlight .kr {
-  color: #66d9ef;
-}
-.highlight .no {
-  color: #66d9ef;
-}
-.highlight .kt {
-  color: #66d9ef;
-}
-.highlight .mf {
-  color: #ae81ff;
-}
-.highlight .mh {
-  color: #ae81ff;
-}
-.highlight .il {
-  color: #ae81ff;
-}
-.highlight .mi {
-  color: #ae81ff;
-}
-.highlight .mo {
-  color: #ae81ff;
-}
-.highlight .m, .highlight .mb, .highlight .mx {
-  color: #ae81ff;
-}
-.highlight .sc {
-  color: #ae81ff;
-}
-.highlight .se {
-  color: #ae81ff;
-}
-.highlight .ss {
-  color: #ae81ff;
-}
-.highlight .sd {
-  color: #e6db74;
-}
-.highlight .s2 {
-  color: #e6db74;
-}
-.highlight .sb {
-  color: #e6db74;
-}
-.highlight .sh {
-  color: #e6db74;
-}
-.highlight .si {
-  color: #e6db74;
-}
-.highlight .sx {
-  color: #e6db74;
-}
-.highlight .s1 {
-  color: #e6db74;
-}
-.highlight .s, .highlight .sa, .highlight .dl {
-  color: #e6db74;
-}
-.highlight .na {
-  color: #a6e22e;
-}
-.highlight .nc {
-  color: #a6e22e;
-}
-.highlight .nd {
-  color: #a6e22e;
-}
-.highlight .ne {
-  color: #a6e22e;
-}
-.highlight .nf, .highlight .fm {
-  color: #a6e22e;
-}
-.highlight .vc {
-  color: #ffffff;
-}
-.highlight .nn {
-  color: #ffffff;
-}
-.highlight .ni {
-  color: #ffffff;
-}
-.highlight .bp {
-  color: #ffffff;
-}
-.highlight .vg {
-  color: #ffffff;
-}
-.highlight .vi {
-  color: #ffffff;
-}
-.highlight .nv, .highlight .vm {
-  color: #ffffff;
-}
-.highlight .w {
-  color: #ffffff;
-}
-.highlight {
-  color: #ffffff;
-}
-.highlight .n, .highlight .py, .highlight .nx {
-  color: #ffffff;
-}
-.highlight .nl {
-  color: #f92672;
-}
-.highlight .ow {
-  color: #f92672;
-}
-.highlight .nt {
-  color: #f92672;
-}
-.highlight .k, .highlight .kv {
-  color: #f92672;
-}
-.highlight .kn {
-  color: #f92672;
-}
-.highlight .kp {
-  color: #f92672;
-}
-.highlight .o {
-  color: #f92672;
-}
-    </style>
-    <style media="print">
-      * {
-        -webkit-transition:none!important;
-        transition:none!important;
-      }
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #586e75;
-}
-.highlight .err {
-  color: #002b36;
-  background-color: #dc322f;
-}
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #657b83;
-}
-.highlight .cp {
-  color: #b58900;
-}
-.highlight .nt {
-  color: #b58900;
-}
-.highlight .o, .highlight .ow {
-  color: #93a1a1;
-}
-.highlight .p, .highlight .pi {
-  color: #93a1a1;
-}
-.highlight .gi {
-  color: #859900;
-}
-.highlight .gd {
-  color: #dc322f;
-}
-.highlight .gh {
-  color: #268bd2;
-  background-color: #002b36;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #6c71c4;
-}
-.highlight .kc {
-  color: #cb4b16;
-}
-.highlight .kt {
-  color: #cb4b16;
-}
-.highlight .kd {
-  color: #cb4b16;
-}
-.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #859900;
-}
-.highlight .sr {
-  color: #2aa198;
-}
-.highlight .si {
-  color: #d33682;
-}
-.highlight .se {
-  color: #d33682;
-}
-.highlight .nn {
-  color: #b58900;
-}
-.highlight .nc {
-  color: #b58900;
-}
-.highlight .no {
-  color: #b58900;
-}
-.highlight .na {
-  color: #268bd2;
-}
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
-  color: #859900;
-}
-.highlight .ss {
-  color: #859900;
-}
-    </style>
-    <link href="stylesheets/screen-c43446af.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-a10f62fa.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-e9bde216.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>up skill lab</title>
 
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
-  </head>
+  <style media="screen">
+    .highlight table td {
+      padding: 5px;
+    }
 
-  <body class="index" data-languages="[&quot;Критерии достижения результата&quot;]">
-    <a href="#" id="nav-button">
-      <span>
-        NAV
-        <img src="images/navbar-cad8cdcb.png" alt="" />
-      </span>
-    </a>
-    <div class="toc-wrapper">
-      <img src="images/logo-9e8951cb.png" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="Критерии достижения результата">Критерии достижения результата</a>
-        </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <ul id="toc" class="toc-list-h1">
+    .highlight table pre {
+      margin: 0;
+    }
+
+    .highlight .gh {
+      color: #999999;
+    }
+
+    .highlight .sr {
+      color: #f6aa11;
+    }
+
+    .highlight .go {
+      color: #888888;
+    }
+
+    .highlight .gp {
+      color: #555555;
+    }
+
+    .highlight .gs {}
+
+    .highlight .gu {
+      color: #aaaaaa;
+    }
+
+    .highlight .nb {
+      color: #f6aa11;
+    }
+
+    .highlight .cm {
+      color: #75715e;
+    }
+
+    .highlight .cp {
+      color: #75715e;
+    }
+
+    .highlight .c1 {
+      color: #75715e;
+    }
+
+    .highlight .cs {
+      color: #75715e;
+    }
+
+    .highlight .c,
+    .highlight .ch,
+    .highlight .cd,
+    .highlight .cpf {
+      color: #75715e;
+    }
+
+    .highlight .err {
+      color: #960050;
+    }
+
+    .highlight .gr {
+      color: #960050;
+    }
+
+    .highlight .gt {
+      color: #960050;
+    }
+
+    .highlight .gd {
+      color: #49483e;
+    }
+
+    .highlight .gi {
+      color: #49483e;
+    }
+
+    .highlight .ge {
+      color: #49483e;
+    }
+
+    .highlight .kc {
+      color: #66d9ef;
+    }
+
+    .highlight .kd {
+      color: #66d9ef;
+    }
+
+    .highlight .kr {
+      color: #66d9ef;
+    }
+
+    .highlight .no {
+      color: #66d9ef;
+    }
+
+    .highlight .kt {
+      color: #66d9ef;
+    }
+
+    .highlight .mf {
+      color: #ae81ff;
+    }
+
+    .highlight .mh {
+      color: #ae81ff;
+    }
+
+    .highlight .il {
+      color: #ae81ff;
+    }
+
+    .highlight .mi {
+      color: #ae81ff;
+    }
+
+    .highlight .mo {
+      color: #ae81ff;
+    }
+
+    .highlight .m,
+    .highlight .mb,
+    .highlight .mx {
+      color: #ae81ff;
+    }
+
+    .highlight .sc {
+      color: #ae81ff;
+    }
+
+    .highlight .se {
+      color: #ae81ff;
+    }
+
+    .highlight .ss {
+      color: #ae81ff;
+    }
+
+    .highlight .sd {
+      color: #e6db74;
+    }
+
+    .highlight .s2 {
+      color: #e6db74;
+    }
+
+    .highlight .sb {
+      color: #e6db74;
+    }
+
+    .highlight .sh {
+      color: #e6db74;
+    }
+
+    .highlight .si {
+      color: #e6db74;
+    }
+
+    .highlight .sx {
+      color: #e6db74;
+    }
+
+    .highlight .s1 {
+      color: #e6db74;
+    }
+
+    .highlight .s,
+    .highlight .sa,
+    .highlight .dl {
+      color: #e6db74;
+    }
+
+    .highlight .na {
+      color: #a6e22e;
+    }
+
+    .highlight .nc {
+      color: #a6e22e;
+    }
+
+    .highlight .nd {
+      color: #a6e22e;
+    }
+
+    .highlight .ne {
+      color: #a6e22e;
+    }
+
+    .highlight .nf,
+    .highlight .fm {
+      color: #a6e22e;
+    }
+
+    .highlight .vc {
+      color: #ffffff;
+    }
+
+    .highlight .nn {
+      color: #ffffff;
+    }
+
+    .highlight .ni {
+      color: #ffffff;
+    }
+
+    .highlight .bp {
+      color: #ffffff;
+    }
+
+    .highlight .vg {
+      color: #ffffff;
+    }
+
+    .highlight .vi {
+      color: #ffffff;
+    }
+
+    .highlight .nv,
+    .highlight .vm {
+      color: #ffffff;
+    }
+
+    .highlight .w {
+      color: #ffffff;
+    }
+
+    .highlight {
+      color: #ffffff;
+    }
+
+    .highlight .n,
+    .highlight .py,
+    .highlight .nx {
+      color: #ffffff;
+    }
+
+    .highlight .nl {
+      color: #f92672;
+    }
+
+    .highlight .ow {
+      color: #f92672;
+    }
+
+    .highlight .nt {
+      color: #f92672;
+    }
+
+    .highlight .k,
+    .highlight .kv {
+      color: #f92672;
+    }
+
+    .highlight .kn {
+      color: #f92672;
+    }
+
+    .highlight .kp {
+      color: #f92672;
+    }
+
+    .highlight .o {
+      color: #f92672;
+    }
+  </style>
+  <style media="print">
+    * {
+      -webkit-transition: none !important;
+      transition: none !important;
+    }
+
+    .highlight table td {
+      padding: 5px;
+    }
+
+    .highlight table pre {
+      margin: 0;
+    }
+
+    .highlight,
+    .highlight .w {
+      color: #586e75;
+    }
+
+    .highlight .err {
+      color: #002b36;
+      background-color: #dc322f;
+    }
+
+    .highlight .c,
+    .highlight .ch,
+    .highlight .cd,
+    .highlight .cm,
+    .highlight .cpf,
+    .highlight .c1,
+    .highlight .cs {
+      color: #657b83;
+    }
+
+    .highlight .cp {
+      color: #b58900;
+    }
+
+    .highlight .nt {
+      color: #b58900;
+    }
+
+    .highlight .o,
+    .highlight .ow {
+      color: #93a1a1;
+    }
+
+    .highlight .p,
+    .highlight .pi {
+      color: #93a1a1;
+    }
+
+    .highlight .gi {
+      color: #859900;
+    }
+
+    .highlight .gd {
+      color: #dc322f;
+    }
+
+    .highlight .gh {
+      color: #268bd2;
+      background-color: #002b36;
+      font-weight: bold;
+    }
+
+    .highlight .k,
+    .highlight .kn,
+    .highlight .kp,
+    .highlight .kr,
+    .highlight .kv {
+      color: #6c71c4;
+    }
+
+    .highlight .kc {
+      color: #cb4b16;
+    }
+
+    .highlight .kt {
+      color: #cb4b16;
+    }
+
+    .highlight .kd {
+      color: #cb4b16;
+    }
+
+    .highlight .s,
+    .highlight .sa,
+    .highlight .sb,
+    .highlight .sc,
+    .highlight .dl,
+    .highlight .sd,
+    .highlight .s2,
+    .highlight .sh,
+    .highlight .sx,
+    .highlight .s1 {
+      color: #859900;
+    }
+
+    .highlight .sr {
+      color: #2aa198;
+    }
+
+    .highlight .si {
+      color: #d33682;
+    }
+
+    .highlight .se {
+      color: #d33682;
+    }
+
+    .highlight .nn {
+      color: #b58900;
+    }
+
+    .highlight .nc {
+      color: #b58900;
+    }
+
+    .highlight .no {
+      color: #b58900;
+    }
+
+    .highlight .na {
+      color: #268bd2;
+    }
+
+    .highlight .m,
+    .highlight .mb,
+    .highlight .mf,
+    .highlight .mh,
+    .highlight .mi,
+    .highlight .il,
+    .highlight .mo,
+    .highlight .mx {
+      color: #859900;
+    }
+
+    .highlight .ss {
+      color: #859900;
+    }
+  </style>
+  <link href="stylesheets/screen-c43446af.css" rel="stylesheet" media="screen" />
+  <link href="stylesheets/print-a10f62fa.css" rel="stylesheet" media="print" />
+  <script src="javascripts/all-e9bde216.js"></script>
+
+  <script>
+    $(function () {
+      setupCodeCopy();
+    });
+  </script>
+</head>
+
+<body class="index" data-languages='["Критерии достижения результата"]'>
+  <a href="#" id="nav-button">
+    <span>
+      NAV
+      <img src="images/navbar-cad8cdcb.png" alt="" />
+    </span>
+  </a>
+  <div class="toc-wrapper">
+    <img src="images/logo-9e8951cb.png" class="logo" alt="" />
+    <div class="lang-selector">
+      <a href="#" data-language-name="Критерии достижения результата">Критерии достижения результата</a>
+    </div>
+    <div class="search">
+      <input type="text" class="search" id="input-search" placeholder="Search" />
+    </div>
+    <ul class="search-results"></ul>
+    <ul id="toc" class="toc-list-h1">
+      <li>
+        <a href="#3c6f4b4af8" class="toc-h1 toc-link" data-title="Подготовительная неделя">Подготовительная неделя</a>
+        <ul class="toc-list-h2">
           <li>
-            <a href="#3c6f4b4af8" class="toc-h1 toc-link" data-title="Подготовительная неделя">Подготовительная неделя</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#computer-science-basics" class="toc-h2 toc-link" data-title="Computer Science Basics">Computer Science Basics</a>
-                  </li>
-                  <li>
-                    <a href="#html-css-basic" class="toc-h2 toc-link" data-title="HTML/Css basic">HTML/Css basic</a>
-                  </li>
-                  <li>
-                    <a href="#js-basic" class="toc-h2 toc-link" data-title="JS basic">JS basic</a>
-                  </li>
-              </ul>
+            <a href="#computer-science-basics" class="toc-h2 toc-link" data-title="Computer Science Basics">Computer
+              Science Basics</a>
           </li>
           <li>
-            <a href="#1" class="toc-h1 toc-link" data-title="Неделя №1">Неделя №1</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#basic-git-amp-github" class="toc-h2 toc-link" data-title="Basic Git &amp; GitHub">Basic Git &amp; GitHub</a>
-                  </li>
-                  <li>
-                    <a href="#ide" class="toc-h2 toc-link" data-title="IDE">IDE</a>
-                  </li>
-                  <li>
-                    <a href="#markdown" class="toc-h2 toc-link" data-title="Markdown">Markdown</a>
-                  </li>
-                  <li>
-                    <a href="#1-1" class="toc-h2 toc-link" data-title="Практическое задание №1.1">Практическое задание №1.1</a>
-                  </li>
-                  <li>
-                    <a href="#html-css-basic-semantic" class="toc-h2 toc-link" data-title="HTML/Css Basic. Semantic.">HTML/Css Basic. Semantic.</a>
-                  </li>
-                  <li>
-                    <a href="#1-2" class="toc-h2 toc-link" data-title="Практическое задание №1.2">Практическое задание №1.2</a>
-                  </li>
-                  <li>
-                    <a href="#css3" class="toc-h2 toc-link" data-title="CSS3">CSS3</a>
-                  </li>
-                  <li>
-                    <a href="#1-3" class="toc-h2 toc-link" data-title="Практическое задание №1.3">Практическое задание №1.3</a>
-                  </li>
-                  <li>
-                    <a href="#css-positioning-and-layout-flex" class="toc-h2 toc-link" data-title="CSS positioning and layout (Flex)">CSS positioning and layout (Flex)</a>
-                  </li>
-                  <li>
-                    <a href="#1-4" class="toc-h2 toc-link" data-title="Практическое задание №1.4">Практическое задание №1.4</a>
-                  </li>
-                  <li>
-                    <a href="#14f8fcd554" class="toc-h2 toc-link" data-title="Медиазапросы">Медиазапросы</a>
-                  </li>
-                  <li>
-                    <a href="#1-5" class="toc-h2 toc-link" data-title="Практическое задание №1.5">Практическое задание №1.5</a>
-                  </li>
-              </ul>
+            <a href="#html-css-basic" class="toc-h2 toc-link" data-title="HTML/Css basic">HTML/Css basic</a>
           </li>
           <li>
-            <a href="#2-3" class="toc-h1 toc-link" data-title="Неделя №2-3">Неделя №2-3</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#git-amp-github" class="toc-h2 toc-link" data-title="Git &amp; GitHub">Git &amp; GitHub</a>
-                  </li>
-                  <li>
-                    <a href="#hrome-devtools" class="toc-h2 toc-link" data-title="Сhrome DevTools">Сhrome DevTools</a>
-                  </li>
-                  <li>
-                    <a href="#html-css" class="toc-h2 toc-link" data-title="HTML/Css">HTML/Css</a>
-                  </li>
-                  <li>
-                    <a href="#sass" class="toc-h2 toc-link" data-title="Sass">Sass</a>
-                  </li>
-                  <li>
-                    <a href="#javascript" class="toc-h2 toc-link" data-title="JavaScript для верстальщика">JavaScript для верстальщика</a>
-                  </li>
-                  <li>
-                    <a href="#grid" class="toc-h2 toc-link" data-title="Grid">Grid</a>
-                  </li>
-                  <li>
-                    <a href="#2-3-1" class="toc-h2 toc-link" data-title="Практическое задание №2-3.1">Практическое задание №2-3.1</a>
-                  </li>
-              </ul>
+            <a href="#js-basic" class="toc-h2 toc-link" data-title="JS basic">JS basic</a>
           </li>
-          <li>
-            <a href="#4" class="toc-h1 toc-link" data-title="Неделя №4">Неделя №4</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#javascript-basic" class="toc-h2 toc-link" data-title="JavaScript Basic">JavaScript Basic</a>
-                  </li>
-                  <li>
-                    <a href="#4-1" class="toc-h2 toc-link" data-title="Практическое задание №4.1">Практическое задание №4.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#5" class="toc-h1 toc-link" data-title="Неделя №5">Неделя №5</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#javascript-array-object" class="toc-h2 toc-link" data-title="JavaScript. Array. Object.">JavaScript. Array. Object.</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-function" class="toc-h2 toc-link" data-title="JavaScript. Function.">JavaScript. Function.</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-data-mapping-basic-operations" class="toc-h2 toc-link" data-title="JavaScript. Data mapping. Basic operations.">JavaScript. Data mapping. Basic operations.</a>
-                  </li>
-                  <li>
-                    <a href="#5-1" class="toc-h2 toc-link" data-title="Практическое задание №5.1">Практическое задание №5.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#6-7" class="toc-h1 toc-link" data-title="Неделя №6-7">Неделя №6-7</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#javascript-date-and-time" class="toc-h2 toc-link" data-title="JavaScript. Date and time">JavaScript. Date and time</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-dom-elements" class="toc-h2 toc-link" data-title="JavaScript. DOM, elements">JavaScript. DOM, elements</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-browser-events-other-events" class="toc-h2 toc-link" data-title="JavaScript. Browser events, other events">JavaScript. Browser events, other events</a>
-                  </li>
-                  <li>
-                    <a href="#webpack" class="toc-h2 toc-link" data-title="Webpack">Webpack</a>
-                  </li>
-                  <li>
-                    <a href="#6-7-1" class="toc-h2 toc-link" data-title="Практическое задание №6-7.1">Практическое задание №6-7.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#8-9" class="toc-h1 toc-link" data-title="Неделя №8-9">Неделя №8-9</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#javascript-this-scope-closure" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. This. Scope. Closure">Продвинутый JavaScript. This. Scope. Closure</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-oop" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. OOP">Продвинутый JavaScript. OOP</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-inheritance" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. Inheritance">Продвинутый JavaScript. Inheritance</a>
-                  </li>
-                  <li>
-                    <a href="#javascript-es6" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. ES6+">Продвинутый JavaScript. ES6+</a>
-                  </li>
-                  <li>
-                    <a href="#8-9-1" class="toc-h2 toc-link" data-title="Практическое задание №8-9.1">Практическое задание №8-9.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#10-11" class="toc-h1 toc-link" data-title="Неделя №10-11">Неделя №10-11</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#async-programming" class="toc-h2 toc-link" data-title="Async programming">Async programming</a>
-                  </li>
-                  <li>
-                    <a href="#restful-api-style" class="toc-h2 toc-link" data-title="RESTful API Style">RESTful API Style</a>
-                  </li>
-                  <li>
-                    <a href="#10-11-1" class="toc-h2 toc-link" data-title="Практическое задание №10-11.1">Практическое задание №10-11.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#12" class="toc-h1 toc-link" data-title="Неделя №12">Неделя №12</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#http-https" class="toc-h2 toc-link" data-title="HTTP/ HTTPS">HTTP/ HTTPS</a>
-                  </li>
-                  <li>
-                    <a href="#websocket" class="toc-h2 toc-link" data-title="WebSocket">WebSocket</a>
-                  </li>
-                  <li>
-                    <a href="#practical-javascript" class="toc-h2 toc-link" data-title="Practical JavaScript">Practical JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#12-1" class="toc-h2 toc-link" data-title="Практическое задание №12.1">Практическое задание №12.1</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#13" class="toc-h1 toc-link" data-title="Неделя №13">Неделя №13</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#interview" class="toc-h2 toc-link" data-title="Interview">Interview</a>
-                  </li>
-              </ul>
-          </li>
-      </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>up skill lab</a></li>
         </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <h1 id='3c6f4b4af8'>Подготовительная неделя</h1>
-<aside class="notice">
-Время на прохождения модуля - 52 часа
-</aside>
+      </li>
+      <li>
+        <a href="#1" class="toc-h1 toc-link" data-title="Неделя №1">Неделя №1</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#basic-git-amp-github" class="toc-h2 toc-link" data-title="Basic Git &amp; GitHub">Basic Git &amp;
+              GitHub</a>
+          </li>
+          <li>
+            <a href="#ide" class="toc-h2 toc-link" data-title="IDE">IDE</a>
+          </li>
+          <li>
+            <a href="#markdown" class="toc-h2 toc-link" data-title="Markdown">Markdown</a>
+          </li>
+          <li>
+            <a href="#1-1" class="toc-h2 toc-link" data-title="Практическое задание №1.1">Практическое задание №1.1</a>
+          </li>
+          <li>
+            <a href="#html-css-basic-semantic" class="toc-h2 toc-link" data-title="HTML/Css Basic. Semantic.">HTML/Css
+              Basic. Semantic.</a>
+          </li>
+          <li>
+            <a href="#1-2" class="toc-h2 toc-link" data-title="Практическое задание №1.2">Практическое задание №1.2</a>
+          </li>
+          <li>
+            <a href="#css3" class="toc-h2 toc-link" data-title="CSS3">CSS3</a>
+          </li>
+          <li>
+            <a href="#1-3" class="toc-h2 toc-link" data-title="Практическое задание №1.3">Практическое задание №1.3</a>
+          </li>
+          <li>
+            <a href="#css-positioning-and-layout-flex" class="toc-h2 toc-link"
+              data-title="CSS positioning and layout (Flex)">CSS positioning and layout (Flex)</a>
+          </li>
+          <li>
+            <a href="#1-4" class="toc-h2 toc-link" data-title="Практическое задание №1.4">Практическое задание №1.4</a>
+          </li>
+          <li>
+            <a href="#14f8fcd554" class="toc-h2 toc-link" data-title="Медиазапросы">Медиазапросы</a>
+          </li>
+          <li>
+            <a href="#1-5" class="toc-h2 toc-link" data-title="Практическое задание №1.5">Практическое задание №1.5</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#2-3" class="toc-h1 toc-link" data-title="Неделя №2-3">Неделя №2-3</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#git-amp-github" class="toc-h2 toc-link" data-title="Git &amp; GitHub">Git &amp; GitHub</a>
+          </li>
+          <li>
+            <a href="#hrome-devtools" class="toc-h2 toc-link" data-title="Сhrome DevTools">Сhrome DevTools</a>
+          </li>
+          <li>
+            <a href="#html-css" class="toc-h2 toc-link" data-title="HTML/Css">HTML/Css</a>
+          </li>
+          <li>
+            <a href="#sass" class="toc-h2 toc-link" data-title="Sass">Sass</a>
+          </li>
+          <li>
+            <a href="#javascript" class="toc-h2 toc-link" data-title="JavaScript для верстальщика">JavaScript для
+              верстальщика</a>
+          </li>
+          <li>
+            <a href="#grid" class="toc-h2 toc-link" data-title="Grid">Grid</a>
+          </li>
+          <li>
+            <a href="#2-3-1" class="toc-h2 toc-link" data-title="Практическое задание №2-3.1">Практическое задание
+              №2-3.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#4" class="toc-h1 toc-link" data-title="Неделя №4">Неделя №4</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#javascript-basic" class="toc-h2 toc-link" data-title="JavaScript Basic">JavaScript Basic</a>
+          </li>
+          <li>
+            <a href="#4-1" class="toc-h2 toc-link" data-title="Практическое задание №4.1">Практическое задание №4.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#5" class="toc-h1 toc-link" data-title="Неделя №5">Неделя №5</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#javascript-array-object" class="toc-h2 toc-link"
+              data-title="JavaScript. Array. Object.">JavaScript. Array. Object.</a>
+          </li>
+          <li>
+            <a href="#javascript-function" class="toc-h2 toc-link" data-title="JavaScript. Function.">JavaScript.
+              Function.</a>
+          </li>
+          <li>
+            <a href="#javascript-data-mapping-basic-operations" class="toc-h2 toc-link"
+              data-title="JavaScript. Data mapping. Basic operations.">JavaScript. Data mapping. Basic operations.</a>
+          </li>
+          <li>
+            <a href="#5-1" class="toc-h2 toc-link" data-title="Практическое задание №5.1">Практическое задание №5.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#6-7" class="toc-h1 toc-link" data-title="Неделя №6-7">Неделя №6-7</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#javascript-date-and-time" class="toc-h2 toc-link"
+              data-title="JavaScript. Date and time">JavaScript. Date and time</a>
+          </li>
+          <li>
+            <a href="#javascript-dom-elements" class="toc-h2 toc-link"
+              data-title="JavaScript. DOM, elements">JavaScript. DOM, elements</a>
+          </li>
+          <li>
+            <a href="#javascript-browser-events-other-events" class="toc-h2 toc-link"
+              data-title="JavaScript. Browser events, other events">JavaScript. Browser events, other events</a>
+          </li>
+          <li>
+            <a href="#webpack" class="toc-h2 toc-link" data-title="Webpack">Webpack</a>
+          </li>
+          <li>
+            <a href="#6-7-1" class="toc-h2 toc-link" data-title="Практическое задание №6-7.1">Практическое задание
+              №6-7.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#8-9" class="toc-h1 toc-link" data-title="Неделя №8-9">Неделя №8-9</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#javascript-this-scope-closure" class="toc-h2 toc-link"
+              data-title="Продвинутый JavaScript. This. Scope. Closure">Продвинутый JavaScript. This. Scope. Closure</a>
+          </li>
+          <li>
+            <a href="#javascript-oop" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. OOP">Продвинутый
+              JavaScript. OOP</a>
+          </li>
+          <li>
+            <a href="#javascript-inheritance" class="toc-h2 toc-link"
+              data-title="Продвинутый JavaScript. Inheritance">Продвинутый JavaScript. Inheritance</a>
+          </li>
+          <li>
+            <a href="#javascript-es6" class="toc-h2 toc-link" data-title="Продвинутый JavaScript. ES6+">Продвинутый
+              JavaScript. ES6+</a>
+          </li>
+          <li>
+            <a href="#8-9-1" class="toc-h2 toc-link" data-title="Практическое задание №8-9.1">Практическое задание
+              №8-9.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#10-11" class="toc-h1 toc-link" data-title="Неделя №10-11">Неделя №10-11</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#async-programming" class="toc-h2 toc-link" data-title="Async programming">Async programming</a>
+          </li>
+          <li>
+            <a href="#restful-api-style" class="toc-h2 toc-link" data-title="RESTful API Style">RESTful API Style</a>
+          </li>
+          <li>
+            <a href="#10-11-1" class="toc-h2 toc-link" data-title="Практическое задание №10-11.1">Практическое задание
+              №10-11.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#12" class="toc-h1 toc-link" data-title="Неделя №12">Неделя №12</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#http-https" class="toc-h2 toc-link" data-title="HTTP/ HTTPS">HTTP/ HTTPS</a>
+          </li>
+          <li>
+            <a href="#websocket" class="toc-h2 toc-link" data-title="WebSocket">WebSocket</a>
+          </li>
+          <li>
+            <a href="#practical-javascript" class="toc-h2 toc-link" data-title="Practical JavaScript">Practical
+              JavaScript</a>
+          </li>
+          <li>
+            <a href="#12-1" class="toc-h2 toc-link" data-title="Практическое задание №12.1">Практическое задание
+              №12.1</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#13" class="toc-h1 toc-link" data-title="Неделя №13">Неделя №13</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#interview" class="toc-h2 toc-link" data-title="Interview">Interview</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="toc-footer">
+      <li><a href="#">up skill lab</a></li>
+    </ul>
+  </div>
+  <div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+      <h1 id="3c6f4b4af8">Подготовительная неделя</h1>
+      <aside class="notice">Время на прохождения модуля - 52 часа</aside>
 
-<p><strong>Знакомство с основными инструментами front-end разработчика.</strong></p>
-<h2 id='computer-science-basics'>Computer Science Basics</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- составляющие компьютера
-- основы двоичной система счисления
-- существующие операционные системы
-- типы данных и алгоритмы
-- основы компьютерных сетей
-- инструменты повышения производительности
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 16 часов.
-</aside>
-
-<ul>
-<li><a href="http://epa.ms/upskill-start">Computer Science Basics</a> - 16 часов.</li>
-</ul>
-<h2 id='html-css-basic'>HTML/Css basic</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- основы HTML, текст, элементы и медиаэлементы
-- структура HTML дерева
-- формы в HTML
-- семантика и семантические элементы HTML
-- основы CSS (селекторы, наследование)
-- стили для текста
-- блочные и строчные элементы
-- единицы измерения, медиа запросы, анимации
-- позиционирование
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 16 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://ru.code-basics.com/languages/html">HTML для начинающих</a> - 8 часов.</p></li>
-<li><p><a href="https://ru.code-basics.com/languages/css">CSS для начинающих</a> - 8 часов.</p></li>
-</ul>
-<h2 id='js-basic'>JS basic</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- основы JS (инструкции, арифметика, строки,
-синтаксис, переменные, типы данных)
-- функции в JS (вызов, объявление, свойства, методы)
-- условные конструкции, логические переменные 
-и выражениея
-- циклы
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 20 часов.
-</aside>
-
-<ul>
-<li><a href="https://ru.code-basics.com/languages/javascript">JavaScript для начинающих</a> - 20 часов.</li>
-</ul>
-<h1 id='1'>Неделя №1</h1>
-<aside class="notice">
-Время на прохождения модуля - 40 часов (20 теория + 20 практика).
-</aside>
-
-<p><strong>Изучение инструментов, настройка рабочего окружения, синтаксис Markdown, базовый HTML/CSS</strong></p>
-<h2 id='basic-git-amp-github'>Basic Git &amp; GitHub</h2><div class="highlight"><pre class="highlight plaintext"><code>Зарегистрироваться на github
-Добавить SSH ключ и авторизоваться с помощью git
-Клонировать любой публичный репозиторий с github
-Сделать первоначальную настройку гит используя 
-  git config
-Изучить базовые команды git
-Изучить работу с ветками
-Изучить требования к коммитам
-Запустить репозиторий на GitHub Pages
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 2 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://htmlacademy.ru/blog/boost/tools/register-on-github-work-with-console">Регистрация на Гитхабе</a> - 30 мин</p></li>
-<li><p><a href="https://htmlacademy.ru/blog/boost/tools/useful-commands-for-working-with-git">Полезные команды для работы с Git</a> - 30 мин</p></li>
-<li><p><a href="https://docs.rs.school/#/git-convention">Требования к именам коммитов</a> - 30 мин</p></li>
-<li><p><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/create-github-pages.md">Как разместить приложение на  GitHub Pages</a> - 30 мин</p></li>
-</ul>
-<h2 id='ide'>IDE</h2><div class="highlight"><pre class="highlight plaintext"><code>Установить VS Code
-Создать HTML и CSS файлы в VS Code
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1.30 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=1IvGow7V_dk&amp;feature=youtu.be&amp;ab_channel=OlegRewko">VS Code – установка и настройка</a> - 1 час</p></li>
-<li><p><a href="https://htmlacademy.ru/blog/education/all/how-to-run-html">Как написать и запустить HTML на компьютере?</a> - 30 мин</p></li>
-</ul>
-<h2 id='markdown'>Markdown</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить синтаксис markdown
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 30 минут.
-</aside>
-
-<ul>
-<li><a href="https://guides.hexlet.io/markdown/">Что такое Markdown</a> - 30 мин</li>
-</ul>
-<h2 id='1-1'>Практическое задание №1.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задание по ссылке
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 4 часа.
-</aside>
-
-<aside class="success">
-    Выполнить задание:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/git-markdown.md" target="_blank">Task Markdown & Git</a></b>.</p>
-</aside>
-<h2 id='html-css-basic-semantic'>HTML/Css Basic. Semantic.</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-  - структуру документа в HTML
-  - тэги и аттрибуты
-  - ссылки, изображения, таблицы
-  - формы и семантические тэги
-Уметь применять семантические тэги на практике
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 6.30 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/playlist?list=PL3LQJkGQtzc7aWRyr-GaxyO_dwj5inJ1t">HTML для самых маленьких</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/playlist?list=PLY4rE9dstrJyeZlPWoKJr1xKVVnG4w-Hc">HTML для начинающих</a> - 2.5 часа</p></li>
-<li><p><a href="https://webdesign-master.ru/blog/html-css/2.html">Справочник EMMET сокращений для ускорения верстки</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=WeNN9So5DTs">Плагин Emmet - обзор</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=bQRmGxhARhc">Семантические теги в HTML</a> - 30 мин</p></li>
-<li><p><a href="https://html5css.ru/html/html5_semantic_elements.php">HTML5 Семантические элементы</a> - 30 мин</p></li>
-</ul>
-<h2 id='1-2'>Практическое задание №1.2</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задание по ссылке
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 2 часа.
-</aside>
-
-<aside class="success">
-    Выполнить задание:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md" target="_blank">Task HTML, CSS & Git </a></b> - 2 часа</p>
-    <p class="task-note">Создать файл Index.html, использовать семантические теги. 
-    Стилизация будет выполнена в ходе следующего практического задания</p>
-</aside>
-<h2 id='css3'>CSS3</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить основы CSS
-Изучить примеры CSS селекторов
-Знать и понимать:
-  - как подключить CSS в HTML
-  - селекторы CSS
-  - специфичность, каскадность и наследование
-Попробовать на практике писать CSS селекторы
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 5 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=xdBTX4RMoBE&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=2">Видео лекция HTML/Css Basic</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/playlist?list=PL3LQJkGQtzc6_KA1AZy9O6kVWwX1hoaTn">CSS для самых маленьких</a> - 1 час</p></li>
-<li><p><a href="http://rightblog.ru/2606">30 CSS-селекторов, которые вы должны знать</a> - 30 мин</p></li>
-<li><p><a href="https://flukeout.github.io/">Изучение селекторов посредством игры</a> - 1 час</p></li>
-</ul>
-<h2 id='1-3'>Практическое задание №1.3</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 6 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md" target="_blank">Task HTML, CSS & Git Basics</a></b>  - 2 часа</p>
-    <p class="task-note">Начать стилизовать ваше cv на основе созданного index.html. 
-    Окончательная стилизация будет в ходе следующего практического задания.
-    <br> 
-    Представлен <a href="https://drive.google.com/file/d/1GOT8bp6g_UAJ5iOX3orj1W0NDa5wDwvw/view" target="_blank">Пример оформленной работы.</a>
-    <br>
-    Обратите внимание, это только пример. Вы можете оформить на свое усмотрение.</p>
-    <p class="task-link"><b><a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page" target="_blank">Build a Tribute Page</a></b>  - 4 часа</p>
-</aside>
-<h2 id='css-positioning-and-layout-flex'>CSS positioning and layout (Flex)</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить и понимать position, floats, semantic,
-  CSS3, основы flexbox layout
-Закрепить основные правила flexbox
-Попробовать на практике flexbox
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 4 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=iSQcOjxttNg&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=3">Видео лекция Position. Floats. Flex. Semantic. CSS3</a> - 2 часа</p></li>
-<li><p><a href="https://www.evernote.com/shard/s368/client/snv?noteGuid=4346cdea-9386-4738-bfff-f9faafc05e94&amp;noteKey=fb6ec76312f7111b&amp;sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs368%2Fsh%2F4346cdea-9386-4738-bfff-f9faafc05e94%2Ffb6ec76312f7111b&amp;title=CSS%253A%2BFlexbox%2B%2528htmlacademy.ru%2529">CSS: Flexbox</a> - 30 мин</p></li>
-<li><p><a href="https://habr.com/ru/post/313938/">Шпаргалка по Flexbox</a> - 30 мин</p></li>
-<li><p><a href="https://flexboxfroggy.com/#ru">Изучение флексбоксов посредством игры</a> - 1 час</p></li>
-</ul>
-<h2 id='1-4'>Практическое задание №1.4</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задание по ссылке
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 2 часа.
-</aside>
-
-<aside class="success">
-    Выполнить задание:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md" target="_blank">Task HTML, CSS & Git Basics</a></b> - 2 часа.<p>
-    <p class="task-note">Завершить стилизацию вашего cv</p>
-</aside>
-<h2 id='14f8fcd554'>Медиазапросы</h2><div class="highlight"><pre class="highlight plaintext"><code>- изучить основы медиазапросов
-- знать основные операторы
-- знать назначение метатэга viewport
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1 час.
-</aside>
-
-<ul>
-<li><p><a href="https://html5book.ru/css3-mediazaprosy/">CSS3-медиазапросы</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=M-xc1EOMOIE">Уроки CSS - Медиа запросы основы</a> - 30 мин</p></li>
-</ul>
-<h2 id='1-5'>Практическое задание №1.5</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задание по ссылке
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 3 часа.
-</aside>
-
-<aside class="success">
-    Выполнить задание:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md" target="blank">Task HTML, CSS & Git Basics</a></b> - 3 часа</p>
-    <p class="task-note">Сделайте ваш cv адаптивным, используя медиазапросы </p>
-</aside>
-<h1 id='2-3'>Неделя №2-3</h1>
-<aside class="notice">
-Время на прохождения модуля - 81 часов (41 теория + 40 практика).
-</aside>
-
-<p><strong>Работа с Git &amp; GitHub и Сhrome DevTools, продвинутый HTML/CSS</strong></p>
-<h2 id='git-amp-github'>Git &amp; GitHub</h2><div class="highlight"><pre class="highlight plaintext"><code>Закрепить знания по использованию git
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 2.5 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.evernote.com/shard/s368/client/snv?noteGuid=b1359883-2b9e-419a-b9de-dd959fc05f05&amp;noteKey=97c0f19486d851b3&amp;sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs368%2Fsh%2Fb1359883-2b9e-419a-b9de-dd959fc05f05%2F97c0f19486d851b3&amp;title=Git">Конспект</a> - 1 час</p></li>
-<li><p><a href="https://learngitbranching.js.org/?locale=ru_RU">Интерактивный курс</a> - 1.5 часа</p></li>
-</ul>
-<h2 id='hrome-devtools'>Сhrome DevTools</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить основные принципы использования
-chrome dev tools
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1.5 часа.
-</aside>
-
-<ul>
-<li><a href="https://www.youtube.com/watch?v=gvB0qoio-Ic&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=7">Видео лекция по Chrome DevTools</a> - 1.5 часа</li>
-</ul>
-<h2 id='html-css'>HTML/Css</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-  - рамки, закругления, треугольники в CSS
-  - фон, спрайты в CSS
-  - тени и градиенты в CSS
-  - плавные переходы и трансформации
-  - анимации
-  - шрифты
-  - верстка макетов и многоколоночного текста
-Изучить использование:
-  - git в vs code
-  - браузеры
-  - cookie, localStorage, sessionStorage
-Изучить работу с формами, событиями в JS, DOM
-Изучить материалы о Singolo на видео
-Посмотреть Friday Live Coding event
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 30 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/playlist?list=PL026CCEB5125879C2">Основы CSS/CSS3</a> - 5 часов</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=UQavTWiTpnA">Вебинар Сергея Шаляпина. FAQ Broswers and IDEs FAQ HTML and CSS Basics</a> - 1.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=PhRVJC0kBGE&amp;feature=youtu.be">Вебинар Сергея Шаляпина. Forms &amp; Inputs. Flexbox &amp; Grid example. Singolo 1 review</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=_5f0kznOM_A&amp;feature=youtu.be">Вебинар Сергея Шаляпина. DOM events exampes. Singolo 3 review</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=0M9Rz-wXYas">Вебинар Сергея Шаляпина. DOM examples. Singolo DOM FAQ. Singolo responsive details</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=fFDw7AH2OXo&amp;feature=youtu.be">Вебинар Сергея Шаляпина. Singolo FAQ</a> - 1.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=ZAde-IJAHzo&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть 1</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=BJENQIX2e2o&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть 2</a> - 2.5 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=fooyYgIuZe8&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть 3</a> - 3 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=Qk2UGlFNKPE">Вебинар Виктории Ворожун. Часть 4</a> - 3 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=ouZnGUefneQ&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть 5</a> - 3.5 часа</p></li>
-</ul>
-<h2 id='sass'>Sass</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- виды и задачи препроцессоров
-- основы SASS (перменные, наследование,
-селекторы, операторы)
-- импорты, миксины, комментарии
-- плейсхолдеры, функции, медиа запросы
-- 7-1 паттерн
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 3 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=JO8DvVZbxDw&amp;feature=youtu.be">Preprocessors. SASS</a> - 2 часа</p></li>
-<li><p><a href="https://sass-scss.ru/guide/">Основы Sass</a> - 1 час</p></li>
-</ul>
-<h2 id='javascript'>JavaScript для верстальщика</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- селекторы в JS
-- события в JS
-- classList
-- события клавиатуры
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1 час.
-</aside>
-
-<ul>
-<li><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/js-for-frontend.md">JavaScript для верстальщика</a> - 1 час</li>
-</ul>
-<h2 id='grid'>Grid</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить основы Grid layout в CSS:
-- адаптивный grid
-- вложенный grid
-- выравнивание
-- формы
-- наложение
-- позиционирование
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 3 час.
-</aside>
-
-<ul>
-<li><p><a href="https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b">Вёрстка на Grid в CSS</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=LHW_M9mf4Is&amp;list=PLNkWIWHIRwMHlq6yOP65F_rNH5wID1U21">Видео курс Css Grid</a> - 1.5 часа</p></li>
-<li><p><a href="https://cssgridgarden.com/#ru">Изучение гридов посредством игры</a> - 1 час</p></li>
-</ul>
-<h2 id='2-3-1'>Практическое задание №2-3.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Применить grid layout знания на практике
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 40 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задание:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/simple-singolo.md" target="blank">Simple-singolo</a></b> - 40 часов</p>
-</aside>
-<h1 id='4'>Неделя №4</h1>
-<aside class="notice">
-Время на прохождения модуля - 40 часов (20 теория + 20 практика).
-</aside>
-
-<p><strong>Базовый JavaScript</strong></p>
-<h2 id='javascript-basic'>JavaScript Basic</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- основы JS (синтаксис, инструкции, переменные, операторы)
-- типы данных и преобразование типов
-- условные конструкции и операторы сравнения
-- циклы
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 20 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/intro">Введение в JavaScript</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/hello-world">Привет, мир!</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/variables">Переменные</a> - 1 час</p></li>
-<li><p><a href="https://www.youtube.com/playlist?list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem">Основы JavaScript. Видеокурс</a> - 10 часов (изучить все 35 видео)</p></li>
-<li><p><a href="https://learn.javascript.ru/types">Типы данных</a> - 1 час</p></li>
-<li><p><a href="https://medium.com/@Dimetrio89/%D0%B2%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-f95a605de82">Вы не знаете JS: типы данных и значения</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/type-conversions">Преобразование типов</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/operators">Операторы</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=w420Ullz2cw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=4">Видео лекция JS Data types</a> - 1 час (смотреть только первый час, до массивов)</p></li>
-<li><p><a href="https://learn.javascript.ru/comparison">Операторы сравнения</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/ifelse">Условные операторы: if, &#39;?&#39;</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/logical-operators">Логические операторы</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/while-for">Циклы while и for</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/switch">Конструкция &quot;switch&quot;</a> - 30 мин</p></li>
-</ul>
-<h2 id='4-1'>Практическое задание №4.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 20 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic.md" target="blank">Codewars</a></b> - 10 часов
-    <br>
-    (минимум 10 задач на ваш выбор)
-    </p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-1-calculator" target="blank">Calculator</a></b> - 10 часов</p>
-</aside>
-<h1 id='5'>Неделя №5</h1>
-<aside class="notice">
-Время на прохождения модуля - 42.5 часов (22.5 теория + 20 практика).
-</aside>
-
-<p><strong>JavaScript: Array, Object, Function, Data mapping. Basic operations.</strong></p>
-<h2 id='javascript-array-object'>JavaScript. Array. Object.</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- предназначение типа данных массив
-- методы для работы с массивами (используемые в видео)
-- предназначение типа данных объект, создание объектов
-- литералы и свойства объектов
-- использование квадратных скобок
-- циклы для работы с объектами
-- сравнение, копирование и клонирование объектов
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 11 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=w420Ullz2cw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=4">Видео лекция JS Data types </a> - 1 час (смотреть часть, посвященную массивам)</p></li>
-<li><p><a href="https://learn.javascript.ru/object">Объекты</a> - 1 час</p></li>
-<li><p><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects">Работа с объектами</a> - 1 час</p></li>
-<li><p><a href="https://www.youtube.com/playlist?list=PLY4rE9dstrJymG1GyPLgOKsJNq9r-p6pX">Основы Javascript</a> - 8 часов</p></li>
-</ul>
-<h2 id='javascript-function'>JavaScript. Function.</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- назначение и объявление функций
-- внешние переменные в функциях
-- аргументы функций и их значения по-умолчанию
-- возврат значения из функций
-- выбор имени функции
-- различия между function expression и function declaration
-- стрелочные функции
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 5 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/function-basics">Функции</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/function-expressions">Function Expression</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/arrow-functions-basics">Функции-стрелки, основы</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=fShrn50Fkhw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=6">Видео лекция. Functions</a> - 2.5 часа</p></li>
-</ul>
-<h2 id='javascript-data-mapping-basic-operations'>JavaScript. Data mapping. Basic operations.</h2><div class="highlight"><pre class="highlight plaintext"><code>Укрепить знания по примитивным и ссылочным типам данных
-Изучить принципы работы дестуктурирующего присваивания
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 6.5 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/primitives-methods">Методы у примитивов</a> - 30 мин</p></li>
-<li><p><a href="https://learn.javascript.ru/number">Числа</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/string">Строки</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/array">Массивы</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/array-methods">Методы массивов</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/keys-values-entries">Object.keys, values, entries</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/destructuring-assignment">Деструктурирующее присваивание</a> - 1 час</p></li>
-</ul>
-<h2 id='5-1'>Практическое задание №5.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 20 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-2-dynamic-landing-page-30" target="blank">Dynamic Landing Page</a></b> - 6 часов
-    </p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-3-meditation-app-20" target="blank">Meditation App</a></b> - 4 часа</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-4-drum-kit-20" target="blank">Meditation AppDrum Kit</a></b> - 4 часа</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-5-css-variables-and-js-20" target="blank">CSS Variables and JS</a></b> - 4 часа</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-6-flex-panel-gallery-10" target="blank">Flex Panel Gallery</a></b> - 2 часа</p>
-</aside>
-<h1 id='6-7'>Неделя №6-7</h1>
-<aside class="notice">
-Время на прохождения модуля - 75 часов (35 теория + 40 практика).
-</aside>
-
-<p><strong>JavaScript: DOM elements, Browser events, other events.</strong></p>
-<h2 id='javascript-date-and-time'>JavaScript. Date and time</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- создание объектов даты
-- получение и установка элементов даты
-- автоисправление дат
-- преобразование к числу, разница дат, бенчмаркинг
-- преобазование из строки
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1 час.
-</aside>
-
-<ul>
-<li><a href="https://learn.javascript.ru/date">Дата и время</a> - 1 час</li>
-</ul>
-<h2 id='javascript-dom-elements'>JavaScript. DOM, elements</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать: 
-- DOM, BOM, CCSOM
-- навигация по DOM
-- использование селекторов для поиска элементов
-- тэг, тип, содержимое элементов
-- аттрибуты и свойства элементов
-- изменение элементов
-- стили и класс элементов в JS
-- размеры и координаты элементов
-- прокрутка элементов и окна
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 11 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/browser-environment">Браузерное окружение, спецификации</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/dom-nodes">DOM-дерево</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/dom-navigation">Навигация по DOM-элементам</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/searching-elements-dom">Поиск: getElement*, querySelector*</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/basic-dom-node-properties">Свойства узлов: тип, тег и содержимое</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/dom-attributes-and-properties">https://learn.javascript.ru/basic-dom-node-properties</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/modifying-document">Изменение документа</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/styles-and-classes">Стили и классы</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/size-and-scroll">Размеры и прокрутка элементов</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/size-and-scroll-window">Размеры и прокрутка окна</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/coordinates">Координаты</a> - 1 час</p></li>
-</ul>
-<h2 id='javascript-browser-events-other-events'>JavaScript. Browser events, other events</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- события в браузере
-- всплытие и погружение
-- делегирование
-- действие браузеров по умолчанию для событий
-- генерация пользовательских событий
-- события мыши
-- drag'n'drop события
-- ES6 основы и особенности
-- JS объекты и прототипы
-- JS анимации и взаимостейсвие с CSS
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 18 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/introduction-browser-events">Введение в браузерные события</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/bubbling-and-capturing">Всплытие и погружение</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/event-delegation">Делегирование событий</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/default-browser-action">Действия браузера по умолчанию</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/dispatch-events">Генерация пользовательских событий</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/mouse-events-basics">Основы событий мыши</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave">Движение мыши: mouseover/out, mouseenter/leave</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/mouse-drag-and-drop">Drag&#39;n&#39;Drop с событиями мыши</a> - 1 час</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=-2WiaSvOj78&amp;feature=youtu.be">Понимание javascript - работа с DOM</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=Spme1IW1ejg&amp;feature=youtu.be">Javascript. Стандарт ES6. Смысл, основные фишки и подвохи</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=zWjT_2hFkMw&amp;feature=youtu.be">Внутренний мир javascript: объекты и прототипы</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=LM0tW2MZJZ4&amp;list=PLyeqauxei6jezJsOYzsxZFPv8OJe5fb6a&amp;index=4">Понимание javascript - замыкания, контекст, callback</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=0TLnIQbk5qo&amp;feature=youtu.be">Javascipt и анимации - взаимодействие с CSS</a> - 2 часа</p></li>
-</ul>
-<h2 id='webpack'>Webpack</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- назначение webpack
-- основы сборки проекта
-- основные конфигурации webpack
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 5 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=MRlBKfGktwI&amp;feature=youtu.be">Webpack 4 - простая сборка проекта</a> - 2 часа</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=eSaF8NXeNsA&amp;feature=youtu.be">Webpack. Полный курс 2020</a> - 3 часа</p></li>
-</ul>
-<h2 id='6-7-1'>Практическое задание №6-7.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 40 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic-1.md" target="blank">Codewars Basic-1</a></b> - 10 часов
-    </p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-7-fun-with-html5-canvas-40" target="blank">Fun with HTML5 Canvas</a></b> - 8 часов</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-8-custom-video-player-20" target="blank">Custom Video Player</a></b> - 4 часа</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-9-video-speed-controller-10" target="blank">Video Speed Controlle</a></b> - 2 часа</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-10-whack-a-mole-40" target="blank">Whack-A-Mole</a></b> - 8 часов</p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-11-virtual-keyboard-40" target="blank">Virtual Keyboard</a></b> - 8 часов</p>
-</aside>
-<h1 id='8-9'>Неделя №8-9</h1>
-<aside class="notice">
-Время на прохождения модуля - 89 часов (39 теория + 50 практика).
-</aside>
-
-<p><strong>Продвинутый JavaScript: this, scope, closure, ES6</strong></p>
-<h2 id='javascript-this-scope-closure'>Продвинутый JavaScript. This. Scope. Closure</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- контекст в JS
-- объекты переменных
-- ключевое слово this
-- области видимости, включая цепи областей видимости
-- функции
-- замыкания
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 26 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=aQkgUUmUJy4&amp;list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT">Сложный JavaScript простым языком</a> - 20 часов (плейлист состоит из 17 видео лекций)</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-1-execution-contexts/">Контексты исполнения</a> - 1 час</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-2-variable-object/">Объект переменных</a> - 1 час</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-3-this/">This</a> - 1 час</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-4-scope-chain/">Цепь областей видимости</a> - 1 час</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-5-functions/">Функции</a> - 1 час</p></li>
-<li><p><a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-6-closures/">Замыкания</a> - 1 час</p></li>
-</ul>
-<h2 id='javascript-oop'>Продвинутый JavaScript. OOP</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить основы ООП в JS
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 1.5 часа.
-</aside>
-
-<ul>
-<li><a href="https://www.youtube.com/watch?v=5l01s6Vkqp0&amp;feature=youtu.be">Открытый вебинар по javascript - [J]u[S]t prototype this!</a> - 1.5 часа</li>
-</ul>
-<h2 id='javascript-inheritance'>Продвинутый JavaScript. Inheritance</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- классы, их назначение и синтаксис
-- наследование классов
-- статические свойства и методы
-- модификаторы доступа (private, protected)
-- расширение встроенных классов JS
-- определение принадлежности к классу
-- примеси
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 7 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://learn.javascript.ru/class">Класс: базовый синтаксис</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/class-inheritance">Наследование классов</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/static-properties-methods">Статические свойства и методы</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/private-protected-properties-methods">Приватные и защищённые методы и свойства</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/extend-natives">Расширение встроенных классов</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/instanceof">Проверка класса: &quot;instanceof&quot;</a> - 1 час</p></li>
-<li><p><a href="https://learn.javascript.ru/mixins">Примеси</a> - 1 час</p></li>
-</ul>
-<h2 id='javascript-es6'>Продвинутый JavaScript. ES6+</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить нововведения в ES6, ES7, ES8
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 4.5 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=Ti2Q4sQkNdU">EcmaScript - Полный курс (ES6, ES7, ES8)</a> - 2.5 часа</p></li>
-<li><p><a href="https://habr.com/ru/post/305900/">ES6 по-человечески</a> - 1 час</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=7TpAN4FISeI&amp;feature=youtu.be">Что нового в JavaScript 2020?</a> - 1 час</p></li>
-</ul>
-<h2 id='8-9-1'>Практическое задание №8-9.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 50 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic-2.md" target="blank">Codewars Basic-2</a></b> - 10 часов
-    </p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/raindrops.md" target="blank">Raindrops</a></b> - 40 часов</p>
-</aside>
-<h1 id='10-11'>Неделя №10-11</h1>
-<aside class="notice">
-Время на прохождения модуля - 69.5 часов (9.5 теория + 60 практика).
-</aside>
-
-<p><strong>Event Loop, Async programming, RESTful API</strong></p>
-<h2 id='async-programming'>Async programming</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- назначение и использование асинхронности
-- async/await
-- основы работы event loop в JS
-- асинхронные запросы и функции
-- fetch
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 7.5 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=Ih6Q7ka2eSQ&amp;feature=youtu.be">Асинхронность в JavaScript. Таймеры, промисы, async/await</a> - 2.5 часа</p></li>
-<li><p><a href="https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B8-%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-javascript-%D1%81-async-await-ba5f47f4436">Полное понимание синхронного и асинхронного JavaScript с Async/Await</a> - 1 час</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=8cV4ZvHXQL4&amp;feature=youtu.be">Про цикл событий в JavaScript или &quot;как на самом деле работает асинхронность&quot;?</a> - 1 час</p></li>
-<li><p><a href="https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch">Использование Fetch</a> - 1 час</p></li>
-<li><p><a href="https://youtu.be/5kAPExqSZ1I">Асинхронные функции (async/await)</a> - 1 час</p></li>
-<li><p><a href="https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp">JavaScript Fetch API and using Async/Await</a> - 1 час (статья на английском языке. В случае сложностей с переводом - обратитесь к ментору за помощью)</p></li>
-</ul>
-<h2 id='restful-api-style'>RESTful API Style</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать основные принципы REST API
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 2 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://code.tutsplus.com/ru/tutorials/code-your-first-api-with-nodejs-and-express-understanding-rest-apis--cms-31697">Разбираемся с REST и RESTful API</a> - 1 час</p></li>
-<li><p><a href="https://medium.com/@andr.ivas12/rest-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC-%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%BC-90a0bca0bc78">REST: простым языком</a> - 1 час</p></li>
-</ul>
-<h2 id='10-11-1'>Практическое задание №10-11.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задание по ссылке
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 60 часов.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/fancy-weather.md" target="blank">Fancy-weather</a></b> - 60 часов
-    </p>
-</aside>
-<h1 id='12'>Неделя №12</h1>
-<aside class="notice">
-Время на прохождения модуля  - 37 часов (13 теория + 24 практика).
-</aside>
-
-<p><strong>HTTP/ HTTPS, WebSocket</strong></p>
-<h2 id='http-https'>HTTP/ HTTPS</h2><div class="highlight"><pre class="highlight plaintext"><code>Знать и понимать:
-- основы HTTP
-- разницу с HTTPS
-- основы WebSocket
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 30 мин.
-</aside>
-
-<ul>
-<li><a href="https://hostiq.ua/wiki/http-https/">Разница между HTTP и HTTPS</a> - 30 мин</li>
-</ul>
-<h2 id='websocket'>WebSocket</h2>
-<aside class="notice">
-Время на прохождение раздела - 2.5 часа.
-</aside>
-
-<ul>
-<li><p><a href="https://www.youtube.com/watch?v=DKOaL94VyFY&amp;feature=youtu.be">Знакомство с WebSocket</a> - 30 мин</p></li>
-<li><p><a href="https://www.websocket.org/echo.html">Echo Test</a> - 30 мин</p></li>
-<li><p><a href="https://www.youtube.com/watch?v=rpyk9JGAPZs&amp;feature=youtu.be">WebSockets</a> - 1,5 часа</p></li>
-</ul>
-<h2 id='practical-javascript'>Practical JavaScript</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить курс по практическому JS
-</code></pre></div>
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLqKQF2ojwm3n-ufn3E-l6Y0VxDrj3hM5M">Практика JavaScript</a> - 10 часов.</li>
-</ul>
-<h2 id='12-1'>Практическое задание №12.1</h2><div class="highlight"><pre class="highlight plaintext"><code>Выполнить задания по ссылкам
-</code></pre></div>
-<aside class="notice">
-Время на выполнение практического задания - 24 часа.
-</aside>
-
-<aside class="success">
-    Выполнить задания:
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-12-chat-on-socketio-20" target="blank">Chat on socket.io</a></b> - 4 часа
-    </p>
-    <p class="task-link"><b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/Portfolio.md" target="blank">Portfolio</a></b> - 20 часов
-    </p>
-</aside>
-<h1 id='13'>Неделя №13</h1>
-<p><strong>Подготовка к интервью.</strong></p>
-<h2 id='interview'>Interview</h2><div class="highlight"><pre class="highlight plaintext"><code>Изучить возможные вопросы и подготовить к собеседованию
-</code></pre></div>
-<aside class="notice">
-Время на прохождение раздела - 40 часов.
-</aside>
-
-<ul>
-<li><p><a href="https://github.com/lydiahallie/javascript-questions/blob/master/ru-RU/README.md">Список (продвинутых) вопросов по JavaScript</a> - 10 часов ( прочитайте внимательно вопрос, дайте на него ответ и только после этого сравните с предложенным ответом)</p></li>
-<li><p><a href="https://github.com/irinainina/rsschool-materials#%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BA-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E">Подготовка к собеседованию</a> - 30 часов</p></li>
-</ul>
-
+      <p>
+        <strong>Знакомство с основными инструментами front-end
+          разработчика.</strong>
+      </p>
+      <h2 id="computer-science-basics">Computer Science Basics</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - составляющие компьютера
+            - основы двоичной система счисления
+            - существующие операционные системы
+            - типы данных и алгоритмы
+            - основы компьютерных сетей
+            - инструменты повышения производительности
+          </code></pre>
       </div>
-      <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="Критерии достижения результата">Критерии достижения результата</a>
-          </div>
+      <aside class="notice">Время на прохождение раздела - 16 часов.</aside>
+
+      <ul>
+        <li>
+          <a href="http://epa.ms/upskill-start">Computer Science Basics</a> -
+          16 часов.
+        </li>
+      </ul>
+      <h2 id="js-basic">JS basic</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - основы JS (инструкции, арифметика, строки,
+            синтаксис, переменные, типы данных)
+            - функции в JS (вызов, объявление, свойства, методы)
+            - условные конструкции, логические переменные
+            и выражениея
+            - циклы
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 20 часов.</aside>
+
+      <ul>
+        <li>
+          <a href="https://ru.code-basics.com/languages/javascript">JavaScript для начинающих</a>
+          - 20 часов.
+        </li>
+      </ul>
+      <h1 id="1">Неделя №1</h1>
+      <h2 id="1-2">Практическое задание №1.2</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задание по ссылке
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 2 часа.
+      </aside>
+
+      <aside class="success">
+        Выполнить задание:
+        <p class="task-link">
+          <b><a href="https://github.com/wingedseraph/tasks/blob/master/tasks/cv/html-css-git.md" target="_blank">Task
+              HTML, CSS & Git
+            </a></b>
+          - 2 часа
+        </p>
+        <p class="task-note">
+          Создать файл Index.html, использовать семантические теги. Стилизация
+          будет выполнена в ходе следующего практического задания
+        </p>
+      </aside>
+      <h2 id="css3">CSS3</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить основы CSS
+            Изучить примеры CSS селекторов
+            Знать и понимать:
+            - как подключить CSS в HTML
+            - селекторы CSS
+            - специфичность, каскадность и наследование
+            Попробовать на практике писать CSS селекторы
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 5 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=xdBTX4RMoBE&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=2">Видео
+              лекция HTML/Css Basic</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/playlist?list=PL3LQJkGQtzc6_KA1AZy9O6kVWwX1hoaTn">CSS для самых
+              маленьких</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://rightblog.ru/2606">30 CSS-селекторов, которые вы должны знать</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://flukeout.github.io/">Изучение селекторов посредством игры</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="1-3">Практическое задание №1.3</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 6 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md"
+              target="_blank">Task HTML, CSS & Git Basics</a></b>
+          - 2 часа
+        </p>
+        <p class="task-note">
+          Начать стилизовать ваше cv на основе созданного index.html.
+          Окончательная стилизация будет в ходе следующего практического
+          задания.
+          <br />
+          Представлен
+          <a href="https://drive.google.com/file/d/1GOT8bp6g_UAJ5iOX3orj1W0NDa5wDwvw/view" target="_blank">Пример
+            оформленной работы.</a>
+          <br />
+          Обратите внимание, это только пример. Вы можете оформить на свое
+          усмотрение.
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page"
+              target="_blank">Build a Tribute Page</a></b>
+          - 4 часа
+        </p>
+      </aside>
+      <h2 id="css-positioning-and-layout-flex">
+        CSS positioning and layout (Flex)
+      </h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить и понимать position, floats, semantic,
+            CSS3, основы flexbox layout
+            Закрепить основные правила flexbox
+            Попробовать на практике flexbox
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 4 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=iSQcOjxttNg&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=3">Видео
+              лекция Position. Floats. Flex. Semantic. CSS3</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://www.evernote.com/shard/s368/client/snv?noteGuid=4346cdea-9386-4738-bfff-f9faafc05e94&amp;noteKey=fb6ec76312f7111b&amp;sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs368%2Fsh%2F4346cdea-9386-4738-bfff-f9faafc05e94%2Ffb6ec76312f7111b&amp;title=CSS%253A%2BFlexbox%2B%2528htmlacademy.ru%2529">CSS:
+              Flexbox</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://habr.com/ru/post/313938/">Шпаргалка по Flexbox</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://flexboxfroggy.com/#ru">Изучение флексбоксов посредством игры</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="1-4">Практическое задание №1.4</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задание по ссылке
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 2 часа.
+      </aside>
+
+      <aside class="success">
+        Выполнить задание:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md"
+              target="_blank">Task HTML, CSS & Git Basics</a></b>
+          - 2 часа.
+        </p>
+        <p></p>
+        <p class="task-note">Завершить стилизацию вашего cv</p>
+      </aside>
+      <h2 id="14f8fcd554">Медиазапросы</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>- изучить основы медиазапросов
+            - знать основные операторы
+            - знать назначение метатэга viewport
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 1 час.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://html5book.ru/css3-mediazaprosy/">CSS3-медиазапросы</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=M-xc1EOMOIE">Уроки CSS - Медиа запросы основы</a>
+            - 30 мин
+          </p>
+        </li>
+      </ul>
+      <h2 id="1-5">Практическое задание №1.5</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задание по ссылке
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 3 часа.
+      </aside>
+
+      <aside class="success">
+        Выполнить задание:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/codejam-cv.md"
+              target="blank">Task HTML, CSS & Git Basics</a></b>
+          - 3 часа
+        </p>
+        <p class="task-note">
+          Сделайте ваш cv адаптивным, используя медиазапросы
+        </p>
+      </aside>
+      <h1 id="2-3">Неделя №2-3</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 81 часов (41 теория + 40 практика).
+      </aside>
+
+      <p>
+        <strong>Работа с Git &amp; GitHub и Сhrome DevTools, продвинутый
+          HTML/CSS</strong>
+      </p>
+      <h2 id="git-amp-github">Git &amp; GitHub</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Закрепить знания по использованию git
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 2.5 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://www.evernote.com/shard/s368/client/snv?noteGuid=b1359883-2b9e-419a-b9de-dd959fc05f05&amp;noteKey=97c0f19486d851b3&amp;sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs368%2Fsh%2Fb1359883-2b9e-419a-b9de-dd959fc05f05%2F97c0f19486d851b3&amp;title=Git">Конспект</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learngitbranching.js.org/?locale=ru_RU">Интерактивный курс</a>
+            - 1.5 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="hrome-devtools">Сhrome DevTools</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить основные принципы использования
+            chrome dev tools
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 1.5 часа.</aside>
+
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=gvB0qoio-Ic&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=7">Видео
+            лекция по Chrome DevTools</a>
+          - 1.5 часа
+        </li>
+      </ul>
+      <h2 id="html-css">HTML/Css</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - рамки, закругления, треугольники в CSS
+            - фон, спрайты в CSS
+            - тени и градиенты в CSS
+            - плавные переходы и трансформации
+            - анимации
+            - шрифты
+            - верстка макетов и многоколоночного текста
+            Изучить использование:
+            - git в vs code
+            - браузеры
+            - cookie, localStorage, sessionStorage
+            Изучить работу с формами, событиями в JS, DOM
+            Изучить материалы о Singolo на видео
+            Посмотреть Friday Live Coding event
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 30 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/playlist?list=PL026CCEB5125879C2">Основы CSS/CSS3</a>
+            - 5 часов
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=UQavTWiTpnA">Вебинар Сергея Шаляпина. FAQ Broswers and IDEs FAQ
+              HTML and CSS
+              Basics</a>
+            - 1.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=PhRVJC0kBGE&amp;feature=youtu.be">Вебинар Сергея Шаляпина. Forms
+              &amp; Inputs. Flexbox &amp; Grid
+              example. Singolo 1 review</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=_5f0kznOM_A&amp;feature=youtu.be">Вебинар Сергея Шаляпина. DOM
+              events exampes. Singolo 3
+              review</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=0M9Rz-wXYas">Вебинар Сергея Шаляпина. DOM examples. Singolo DOM
+              FAQ. Singolo
+              responsive details</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=fFDw7AH2OXo&amp;feature=youtu.be">Вебинар Сергея Шаляпина. Singolo
+              FAQ</a>
+            - 1.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=ZAde-IJAHzo&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть
+              1</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=BJENQIX2e2o&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть
+              2</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=fooyYgIuZe8&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть
+              3</a>
+            - 3 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=Qk2UGlFNKPE">Вебинар Виктории Ворожун. Часть 4</a>
+            - 3 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=ouZnGUefneQ&amp;feature=youtu.be">Вебинар Виктории Ворожун. Часть
+              5</a>
+            - 3.5 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="sass">Sass</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - виды и задачи препроцессоров
+            - основы SASS (перменные, наследование,
+            селекторы, операторы)
+            - импорты, миксины, комментарии
+            - плейсхолдеры, функции, медиа запросы
+            - 7-1 паттерн
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 3 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=JO8DvVZbxDw&amp;feature=youtu.be">Preprocessors. SASS</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p><a href="https://sass-scss.ru/guide/">Основы Sass</a> - 1 час</p>
+        </li>
+      </ul>
+      <h2 id="javascript">JavaScript для верстальщика</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - селекторы в JS
+            - события в JS
+            - classList
+            - события клавиатуры
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 1 час.</aside>
+
+      <ul>
+        <li>
+          <a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/js-for-frontend.md">JavaScript
+            для верстальщика</a>
+          - 1 час
+        </li>
+      </ul>
+      <h2 id="grid">Grid</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить основы Grid layout в CSS:
+            - адаптивный grid
+            - вложенный grid
+            - выравнивание
+            - формы
+            - наложение
+            - позиционирование
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 3 час.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b">Вёрстка
+              на Grid в CSS</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=LHW_M9mf4Is&amp;list=PLNkWIWHIRwMHlq6yOP65F_rNH5wID1U21">Видео курс
+              Css Grid</a>
+            - 1.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://cssgridgarden.com/#ru">Изучение гридов посредством игры</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="2-3-1">Практическое задание №2-3.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Применить grid layout знания на практике
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 40 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задание:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/simple-singolo.md"
+              target="blank">Simple-singolo</a></b>
+          - 40 часов
+        </p>
+      </aside>
+      <h1 id="4">Неделя №4</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 40 часов (20 теория + 20 практика).
+      </aside>
+
+      <p><strong>Базовый JavaScript</strong></p>
+      <h2 id="javascript-basic">JavaScript Basic</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - основы JS (синтаксис, инструкции, переменные, операторы)
+            - типы данных и преобразование типов
+            - условные конструкции и операторы сравнения
+            - циклы
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 20 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/intro">Введение в JavaScript</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/hello-world">Привет, мир!</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/variables">Переменные</a> - 1
+            час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/playlist?list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem">Основы JavaScript.
+              Видеокурс</a>
+            - 10 часов (изучить все 35 видео)
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/types">Типы данных</a> - 1
+            час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://medium.com/@Dimetrio89/%D0%B2%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-f95a605de82">Вы
+              не знаете JS: типы данных и значения</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/type-conversions">Преобразование типов</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/operators">Операторы</a> - 30
+            мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=w420Ullz2cw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=4">Видео
+              лекция JS Data types</a>
+            - 1 час (смотреть только первый час, до массивов)
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/comparison">Операторы сравнения</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/ifelse">Условные операторы: if, &#39;?&#39;</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/logical-operators">Логические операторы</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/while-for">Циклы while и for</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/switch">Конструкция &quot;switch&quot;</a>
+            - 30 мин
+          </p>
+        </li>
+      </ul>
+      <h2 id="4-1">Практическое задание №4.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 20 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic.md"
+              target="blank">Codewars</a></b>
+          - 10 часов
+          <br />
+          (минимум 10 задач на ваш выбор)
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-1-calculator"
+              target="blank">Calculator</a></b>
+          - 10 часов
+        </p>
+      </aside>
+      <h1 id="5">Неделя №5</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 42.5 часов (22.5 теория + 20 практика).
+      </aside>
+
+      <p>
+        <strong>JavaScript: Array, Object, Function, Data mapping. Basic
+          operations.</strong>
+      </p>
+      <h2 id="javascript-array-object">JavaScript. Array. Object.</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - предназначение типа данных массив
+            - методы для работы с массивами (используемые в видео)
+            - предназначение типа данных объект, создание объектов
+            - литералы и свойства объектов
+            - использование квадратных скобок
+            - циклы для работы с объектами
+            - сравнение, копирование и клонирование объектов
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 11 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=w420Ullz2cw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=4">Видео
+              лекция JS Data types
+            </a>
+            - 1 час (смотреть часть, посвященную массивам)
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/object">Объекты</a> - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects">Работа с
+              объектами</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/playlist?list=PLY4rE9dstrJymG1GyPLgOKsJNq9r-p6pX">Основы Javascript</a>
+            - 8 часов
+          </p>
+        </li>
+      </ul>
+      <h2 id="javascript-function">JavaScript. Function.</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - назначение и объявление функций
+            - внешние переменные в функциях
+            - аргументы функций и их значения по-умолчанию
+            - возврат значения из функций
+            - выбор имени функции
+            - различия между function expression и function declaration
+            - стрелочные функции
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 5 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/function-basics">Функции</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/function-expressions">Function Expression</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/arrow-functions-basics">Функции-стрелки, основы</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=fShrn50Fkhw&amp;list=PLe--kalBDwji8WXKVjhON39X4v_Uj6T_R&amp;index=6">Видео
+              лекция. Functions</a>
+            - 2.5 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="javascript-data-mapping-basic-operations">
+        JavaScript. Data mapping. Basic operations.
+      </h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Укрепить знания по примитивным и ссылочным типам данных
+            Изучить принципы работы дестуктурирующего присваивания
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 6.5 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/primitives-methods">Методы у примитивов</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/number">Числа</a> - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/string">Строки</a> - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/array">Массивы</a> - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/array-methods">Методы массивов</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/keys-values-entries">Object.keys, values, entries</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/destructuring-assignment">Деструктурирующее присваивание</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="5-1">Практическое задание №5.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 20 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-2-dynamic-landing-page-30"
+              target="blank">Dynamic Landing Page</a></b>
+          - 6 часов
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-3-meditation-app-20"
+              target="blank">Meditation App</a></b>
+          - 4 часа
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-4-drum-kit-20"
+              target="blank">Meditation AppDrum Kit</a></b>
+          - 4 часа
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-5-css-variables-and-js-20"
+              target="blank">CSS Variables and JS</a></b>
+          - 4 часа
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-6-flex-panel-gallery-10"
+              target="blank">Flex Panel Gallery</a></b>
+          - 2 часа
+        </p>
+      </aside>
+      <h1 id="6-7">Неделя №6-7</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 75 часов (35 теория + 40 практика).
+      </aside>
+
+      <p>
+        <strong>JavaScript: DOM elements, Browser events, other events.</strong>
+      </p>
+      <h2 id="javascript-date-and-time">JavaScript. Date and time</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - создание объектов даты
+            - получение и установка элементов даты
+            - автоисправление дат
+            - преобразование к числу, разница дат, бенчмаркинг
+            - преобазование из строки
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 1 час.</aside>
+
+      <ul>
+        <li>
+          <a href="https://learn.javascript.ru/date">Дата и время</a> - 1 час
+        </li>
+      </ul>
+      <h2 id="javascript-dom-elements">JavaScript. DOM, elements</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - DOM, BOM, CCSOM
+            - навигация по DOM
+            - использование селекторов для поиска элементов
+            - тэг, тип, содержимое элементов
+            - аттрибуты и свойства элементов
+            - изменение элементов
+            - стили и класс элементов в JS
+            - размеры и координаты элементов
+            - прокрутка элементов и окна
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 11 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/browser-environment">Браузерное окружение, спецификации</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/dom-nodes">DOM-дерево</a> - 1
+            час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/dom-navigation">Навигация по DOM-элементам</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/searching-elements-dom">Поиск: getElement*, querySelector*</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/basic-dom-node-properties">Свойства узлов: тип, тег и содержимое</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://learn.javascript.ru/dom-attributes-and-properties">https://learn.javascript.ru/basic-dom-node-properties</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/modifying-document">Изменение документа</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/styles-and-classes">Стили и классы</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/size-and-scroll">Размеры и прокрутка элементов</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/size-and-scroll-window">Размеры и прокрутка окна</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/coordinates">Координаты</a> -
+            1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="javascript-browser-events-other-events">
+        JavaScript. Browser events, other events
+      </h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - события в браузере
+            - всплытие и погружение
+            - делегирование
+            - действие браузеров по умолчанию для событий
+            - генерация пользовательских событий
+            - события мыши
+            - drag'n'drop события
+            - ES6 основы и особенности
+            - JS объекты и прототипы
+            - JS анимации и взаимостейсвие с CSS
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 18 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/introduction-browser-events">Введение в браузерные события</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/bubbling-and-capturing">Всплытие и погружение</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/event-delegation">Делегирование событий</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/default-browser-action">Действия браузера по умолчанию</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/dispatch-events">Генерация пользовательских событий</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/mouse-events-basics">Основы событий мыши</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave">Движение мыши:
+              mouseover/out, mouseenter/leave</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/mouse-drag-and-drop">Drag&#39;n&#39;Drop с событиями мыши</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=-2WiaSvOj78&amp;feature=youtu.be">Понимание javascript - работа с
+              DOM</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=Spme1IW1ejg&amp;feature=youtu.be">Javascript. Стандарт ES6. Смысл,
+              основные фишки и подвохи</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=zWjT_2hFkMw&amp;feature=youtu.be">Внутренний мир javascript:
+              объекты и прототипы</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=LM0tW2MZJZ4&amp;list=PLyeqauxei6jezJsOYzsxZFPv8OJe5fb6a&amp;index=4">Понимание
+              javascript - замыкания, контекст, callback</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=0TLnIQbk5qo&amp;feature=youtu.be">Javascipt и анимации -
+              взаимодействие с CSS</a>
+            - 2 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="webpack">Webpack</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - назначение webpack
+            - основы сборки проекта
+            - основные конфигурации webpack
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 5 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=MRlBKfGktwI&amp;feature=youtu.be">Webpack 4 - простая сборка
+              проекта</a>
+            - 2 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=eSaF8NXeNsA&amp;feature=youtu.be">Webpack. Полный курс 2020</a>
+            - 3 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="6-7-1">Практическое задание №6-7.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 40 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic-1.md"
+              target="blank">Codewars Basic-1</a></b>
+          - 10 часов
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-7-fun-with-html5-canvas-40"
+              target="blank">Fun with HTML5 Canvas</a></b>
+          - 8 часов
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-8-custom-video-player-20"
+              target="blank">Custom Video Player</a></b>
+          - 4 часа
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-9-video-speed-controller-10"
+              target="blank">Video Speed Controlle</a></b>
+          - 2 часа
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-10-whack-a-mole-40"
+              target="blank">Whack-A-Mole</a></b>
+          - 8 часов
+        </p>
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-11-virtual-keyboard-40"
+              target="blank">Virtual Keyboard</a></b>
+          - 8 часов
+        </p>
+      </aside>
+      <h1 id="8-9">Неделя №8-9</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 89 часов (39 теория + 50 практика).
+      </aside>
+
+      <p>
+        <strong>Продвинутый JavaScript: this, scope, closure, ES6</strong>
+      </p>
+      <h2 id="javascript-this-scope-closure">
+        Продвинутый JavaScript. This. Scope. Closure
+      </h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - контекст в JS
+            - объекты переменных
+            - ключевое слово this
+            - области видимости, включая цепи областей видимости
+            - функции
+            - замыкания
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 26 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=aQkgUUmUJy4&amp;list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT">Сложный
+              JavaScript простым языком</a>
+            - 20 часов (плейлист состоит из 17 видео лекций)
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-1-execution-contexts/">Контексты исполнения</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-2-variable-object/">Объект переменных</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-3-this/">This</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-4-scope-chain/">Цепь областей видимости</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-5-functions/">Функции</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="http://dmitrysoshnikov.com/ecmascript/ru-chapter-6-closures/">Замыкания</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="javascript-oop">Продвинутый JavaScript. OOP</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить основы ООП в JS
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 1.5 часа.</aside>
+
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=5l01s6Vkqp0&amp;feature=youtu.be">Открытый вебинар по javascript -
+            [J]u[S]t prototype this!</a>
+          - 1.5 часа
+        </li>
+      </ul>
+      <h2 id="javascript-inheritance">Продвинутый JavaScript. Inheritance</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - классы, их назначение и синтаксис
+            - наследование классов
+            - статические свойства и методы
+            - модификаторы доступа (private, protected)
+            - расширение встроенных классов JS
+            - определение принадлежности к классу
+            - примеси
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 7 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/class">Класс: базовый синтаксис</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/class-inheritance">Наследование классов</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/static-properties-methods">Статические свойства и методы</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/private-protected-properties-methods">Приватные и защищённые методы и
+              свойства</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/extend-natives">Расширение встроенных классов</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/instanceof">Проверка класса: &quot;instanceof&quot;</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://learn.javascript.ru/mixins">Примеси</a> - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="javascript-es6">Продвинутый JavaScript. ES6+</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить нововведения в ES6, ES7, ES8
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 4.5 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=Ti2Q4sQkNdU">EcmaScript - Полный курс (ES6, ES7, ES8)</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://habr.com/ru/post/305900/">ES6 по-человечески</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=7TpAN4FISeI&amp;feature=youtu.be">Что нового в JavaScript 2020?</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="8-9-1">Практическое задание №8-9.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 50 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/codewars-basic-2.md"
+              target="blank">Codewars Basic-2</a></b>
+          - 10 часов
+        </p>
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/raindrops.md"
+              target="blank">Raindrops</a></b>
+          - 40 часов
+        </p>
+      </aside>
+      <h1 id="10-11">Неделя №10-11</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 69.5 часов (9.5 теория + 60 практика).
+      </aside>
+
+      <p><strong>Event Loop, Async programming, RESTful API</strong></p>
+      <h2 id="async-programming">Async programming</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - назначение и использование асинхронности
+            - async/await
+            - основы работы event loop в JS
+            - асинхронные запросы и функции
+            - fetch
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 7.5 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=Ih6Q7ka2eSQ&amp;feature=youtu.be">Асинхронность в JavaScript.
+              Таймеры, промисы, async/await</a>
+            - 2.5 часа
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B8-%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-javascript-%D1%81-async-await-ba5f47f4436">Полное
+              понимание синхронного и асинхронного JavaScript с
+              Async/Await</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=8cV4ZvHXQL4&amp;feature=youtu.be">Про цикл событий в JavaScript или
+              &quot;как на самом деле
+              работает асинхронность&quot;?</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch">Использование Fetch</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://youtu.be/5kAPExqSZ1I">Асинхронные функции (async/await)</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp">JavaScript Fetch API and
+              using Async/Await</a>
+            - 1 час (статья на английском языке. В случае сложностей с
+            переводом - обратитесь к ментору за помощью)
+          </p>
+        </li>
+      </ul>
+      <h2 id="restful-api-style">RESTful API Style</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать основные принципы REST API
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 2 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://code.tutsplus.com/ru/tutorials/code-your-first-api-with-nodejs-and-express-understanding-rest-apis--cms-31697">Разбираемся
+              с REST и RESTful API</a>
+            - 1 час
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://medium.com/@andr.ivas12/rest-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC-%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%BC-90a0bca0bc78">REST:
+              простым языком</a>
+            - 1 час
+          </p>
+        </li>
+      </ul>
+      <h2 id="10-11-1">Практическое задание №10-11.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задание по ссылке
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 60 часов.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/fancy-weather.md"
+              target="blank">Fancy-weather</a></b>
+          - 60 часов
+        </p>
+      </aside>
+      <h1 id="12">Неделя №12</h1>
+      <aside class="notice">
+        Время на прохождения модуля - 37 часов (13 теория + 24 практика).
+      </aside>
+
+      <p><strong>HTTP/ HTTPS, WebSocket</strong></p>
+      <h2 id="http-https">HTTP/ HTTPS</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Знать и понимать:
+            - основы HTTP
+            - разницу с HTTPS
+            - основы WebSocket
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 30 мин.</aside>
+
+      <ul>
+        <li>
+          <a href="https://hostiq.ua/wiki/http-https/">Разница между HTTP и HTTPS</a>
+          - 30 мин
+        </li>
+      </ul>
+      <h2 id="websocket">WebSocket</h2>
+      <aside class="notice">Время на прохождение раздела - 2.5 часа.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=DKOaL94VyFY&amp;feature=youtu.be">Знакомство с WebSocket</a>
+            - 30 мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.websocket.org/echo.html">Echo Test</a> - 30
+            мин
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://www.youtube.com/watch?v=rpyk9JGAPZs&amp;feature=youtu.be">WebSockets</a>
+            - 1,5 часа
+          </p>
+        </li>
+      </ul>
+      <h2 id="practical-javascript">Practical JavaScript</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить курс по практическому JS
+          </code></pre>
+      </div>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/playlist?list=PLqKQF2ojwm3n-ufn3E-l6Y0VxDrj3hM5M">Практика JavaScript</a>
+          - 10 часов.
+        </li>
+      </ul>
+      <h2 id="12-1">Практическое задание №12.1</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Выполнить задания по ссылкам
+          </code></pre>
+      </div>
+      <aside class="notice">
+        Время на выполнение практического задания - 24 часа.
+      </aside>
+
+      <aside class="success">
+        Выполнить задания:
+        <p class="task-link">
+          <b><a
+              href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-0/projects.md#task-12-chat-on-socketio-20"
+              target="blank">Chat on socket.io</a></b>
+          - 4 часа
+        </p>
+        <p class="task-link">
+          <b><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/Portfolio.md"
+              target="blank">Portfolio</a></b>
+          - 20 часов
+        </p>
+      </aside>
+      <h1 id="13">Неделя №13</h1>
+      <p><strong>Подготовка к интервью.</strong></p>
+      <h2 id="interview">Interview</h2>
+      <div class="highlight">
+        <pre class="highlight plaintext"><code>Изучить возможные вопросы и подготовить к собеседованию
+          </code></pre>
+      </div>
+      <aside class="notice">Время на прохождение раздела - 40 часов.</aside>
+
+      <ul>
+        <li>
+          <p>
+            <a href="https://github.com/lydiahallie/javascript-questions/blob/master/ru-RU/README.md">Список
+              (продвинутых) вопросов по JavaScript</a>
+            - 10 часов ( прочитайте внимательно вопрос, дайте на него ответ и
+            только после этого сравните с предложенным ответом)
+          </p>
+        </li>
+        <li>
+          <p>
+            <a
+              href="https://github.com/irinainina/rsschool-materials#%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BA-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E">Подготовка
+              к собеседованию</a>
+            - 30 часов
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="dark-box">
+      <div class="lang-selector">
+        <a href="#" data-language-name="Критерии достижения результата">Критерии достижения результата</a>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
